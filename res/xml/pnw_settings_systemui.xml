@@ -41,4 +41,12 @@
         android:fragment="com.pnw.settings.fragments.HeadsUpSettings"
         android:icon="@drawable/ic_settings_heads_up"/>
 
+    <!-- gesture_anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.pnw.settings.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" 
+        android:icon="@drawable/ic_settings_gesture_anywhere" >
+    </PreferenceScreen>
+
 </PreferenceScreen>
