@@ -33,4 +33,9 @@
             android:defaultValue="true" />
     </PreferenceCategory>
 
+        <PreferenceScreen
+            android:key="category_network_traffic"
+            android:title="@string/network_traffic_title"
+            android:fragment="com.pnw.settings.fragments.NetworkTraffic" />
+
 </PreferenceScreen>
