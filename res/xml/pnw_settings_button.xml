@@ -20,4 +20,11 @@
     android:layout="@layout/pnw_preference_tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Accidental touch -->
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+            android:key="anbi_enabled"
+            android:title="@string/anbi_title"
+            android:summary="@string/anbi_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
