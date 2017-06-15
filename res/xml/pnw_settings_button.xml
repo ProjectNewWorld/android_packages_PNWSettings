@@ -23,4 +23,10 @@
         android:fragment="com.pnw.settings.fragments.VolumeRockerSettings"
         android:title="@string/volume_title" />
 
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+            android:key="anbi_enabled"
+            android:title="@string/anbi_title"
+            android:summary="@string/anbi_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

@@ -70,4 +70,9 @@
     <string name="powermenu_soundpanel">Sound Panel</string>
     <string name="powermenu_users">Users</string>
     <string name="powermenu_torch">Flashlight</string>
+
+    <!-- ANBI -->
+    <string name="anbi_title">Accidental touch</string>
+    <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
+
 </resources>
