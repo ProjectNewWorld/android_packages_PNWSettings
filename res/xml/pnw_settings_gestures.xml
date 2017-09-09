@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 Nitrogen Project
+     Copyright (C) 2018 Project New World
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,10 +19,16 @@
     android:title="@string/gestures_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.nitrogen.settings.preferences.SystemSettingSwitchPreference
-        android:key="double_tap_sleep_gesture"
-        android:title="@string/double_tap_to_sleep_title"
-        android:summary="@string/double_tap_to_sleep_summary"
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+      android:key="double_tap_sleep_gesture"
+      android:title="@string/double_tap_to_sleep_title"
+      android:summary="@string/double_tap_to_sleep_summary"
+      android:defaultValue="true" />
+
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_lockscreen"
+        android:title="@string/double_tap_to_sleep_lockscreen_title"
+        android:summary="@string/double_tap_to_sleep_lockscreen_summary"
         android:defaultValue="true" />
 
 </PreferenceScreen>
