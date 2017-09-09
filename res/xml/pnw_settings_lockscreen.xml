@@ -20,4 +20,17 @@
     android:layout="@layout/pnw_preference_tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Gestures -->
+    <PreferenceCategory
+        android:key="gestures_category"
+        android:title="@string/gestures_category">
+
+        <!-- Double tap lock screen to sleep -->
+        <com.pnw.settings.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lockscreen"
+            android:title="@string/double_tap_to_sleep_lockscreen_title"
+            android:summary="@string/double_tap_to_sleep_lockscreen_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
