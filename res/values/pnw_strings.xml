@@ -34,6 +34,7 @@
 
     <!-- Categorys -->
     <string name="recents_category">Recents</string>
+    <string name="gestures_category">Gestures</string>
 
     <!-- (!)Dialog -->
     <string name="pnw_dialog_title">Help Us, Help You!!</string>
@@ -60,5 +61,9 @@
     <string name="recents_clear_all_location_bottom_right">Bottom right</string>
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
     <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+
+    <!-- Double tap status bar to sleep -->
+    <string name="double_tap_to_sleep_title">Status bar</string>
+    <string name="double_tap_to_sleep_summary">Double-tap status bar to put the device to sleep</string>
 
 </resources>
