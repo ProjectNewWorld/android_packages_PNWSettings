@@ -27,4 +27,11 @@
         android:fragment="com.pnw.settings.fragments.RecentsSettings"
         android:icon="@drawable/ic_settings_recents"/>
 
+    <!-- Power menu -->
+    <Preference
+        android:key="powermenu_category"
+        android:title="@string/powermenu_title" 
+        android:fragment="com.pnw.settings.fragments.PowerMenuSettings"
+        android:icon="@drawable/ic_settings_powermenu"/>
+
 </PreferenceScreen>
