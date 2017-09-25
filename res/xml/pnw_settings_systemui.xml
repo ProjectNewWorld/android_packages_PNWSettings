@@ -34,4 +34,11 @@
         android:fragment="com.pnw.settings.fragments.PowerMenuSettings"
         android:icon="@drawable/ic_settings_powermenu"/>
 
+    <!-- Heads up notifications -->
+    <Preference
+        android:key="heads_up_notifications"
+        android:title="@string/heads_up_notifications"
+        android:fragment="com.pnw.settings.fragments.HeadsUpSettings"
+        android:icon="@drawable/ic_settings_heads_up"/>
+
 </PreferenceScreen>
