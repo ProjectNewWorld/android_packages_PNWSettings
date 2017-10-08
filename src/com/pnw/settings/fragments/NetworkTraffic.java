@@ -38,7 +38,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.internal.util.omni.DeviceUtils;
+import com.android.internal.util.pnw.DeviceUtils;
 import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -47,7 +47,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 import com.pnw.settings.preferences.CustomSeekBarPreference;
-import com.pnw.settings.preferences.SystemCheckBoxPreference;
 
 public class NetworkTraffic extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
@@ -62,7 +61,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
     private ListPreference mNetTrafficState;
     private ListPreference mNetTrafficUnit;
     private ListPreference mNetTrafficPeriod;
-    private SystemCheckBoxPreference mNetTrafficAutohide;
     private CustomSeekBarPreference mNetTrafficAutohideThreshold;
 
     private int mNetTrafficVal;
@@ -89,7 +87,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
         mNetTrafficState = (ListPreference) prefScreen.findPreference(NETWORK_TRAFFIC_STATE);
         mNetTrafficUnit = (ListPreference) prefScreen.findPreference(NETWORK_TRAFFIC_UNIT);
         mNetTrafficPeriod = (ListPreference) prefScreen.findPreference(NETWORK_TRAFFIC_PERIOD);
-        mNetTrafficAutohide = (SystemCheckBoxPreference) prefScreen.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
         mNetTrafficAutohideThreshold = (CustomSeekBarPreference) prefScreen.findPreference(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
 
         // TrafficStats will return UNSUPPORTED if the device does not support it.
@@ -117,11 +114,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 10);
             mNetTrafficAutohideThreshold.setValue(netTrafficAutohideThreshold / 1);
             mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
-
-            mNetTrafficUnit.setEnabled(intIndex != 0);
-            mNetTrafficPeriod.setEnabled(intIndex != 0);
-            mNetTrafficAutohide.setEnabled(intIndex != 0);
-            mNetTrafficAutohideThreshold.setEnabled(intIndex != 0);
         }
     }
 
@@ -135,10 +127,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficState.findIndexOfValue((String) newValue);
             mNetTrafficState.setSummary(mNetTrafficState.getEntries()[index]);
-            mNetTrafficUnit.setEnabled(intState != 0);
-            mNetTrafficPeriod.setEnabled(intState != 0);
-            mNetTrafficAutohide.setEnabled(intState != 0);
-            mNetTrafficAutohideThreshold.setEnabled(intState != 0);
         } else if (preference == mNetTrafficUnit) {
             // 1 = Display as Byte/s; default is bit/s
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_UNIT, ((String)newValue).equals("1"));

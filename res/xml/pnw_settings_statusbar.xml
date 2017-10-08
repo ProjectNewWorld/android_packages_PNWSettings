@@ -20,6 +20,20 @@
     android:layout="@layout/pnw_preference_tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- StatusBar icons -->
+    <PreferenceCategory
+        android:key="StatusbarIcons_category"
+        android:title="@string/StatusbarIcons_category">
+
+        <!-- network_traffic -->
+        <Preference
+            android:key="category_network_traffic"
+            android:title="@string/network_traffic_title"
+            android:summary="@string/network_traffic_summary"
+            android:fragment="com.pnw.settings.fragments.NetworkTraffic" />
+
+    </PreferenceCategory>
+
     <!-- Gestures -->
     <PreferenceCategory
         android:key="gestures_category"
@@ -32,10 +46,5 @@
             android:summary="@string/double_tap_to_sleep_summary"
             android:defaultValue="true" />
     </PreferenceCategory>
-
-        <PreferenceScreen
-            android:key="category_network_traffic"
-            android:title="@string/network_traffic_title"
-            android:fragment="com.pnw.settings.fragments.NetworkTraffic" />
 
 </PreferenceScreen>
