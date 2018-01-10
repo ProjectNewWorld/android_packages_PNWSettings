@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 PNW Rom
-
+<!-- Copyright (C) 2016 The Nitrogen OS
+     Copyright (C) 2018 Project New World
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -14,14 +14,26 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Main pnw pref screens -->
-    <string name="pnw_settings_title">ProjectNewWorld settings</string>
-    <string name="pnw_interface">Interface</string>
-    <string name="lockscreen_settings_title">Lockscreen and Security</string>
-    <string name="navigationbar_settings_title">Navigation</string>
-    <string name="statusbar_settings_title">Status bar</string>
-    <string name="pnw_misc">Misc</string>
-    <string name="screen_settings_title">Display</string>
-    <string name="other_settings_title">Other</string>
-    <string name="recent_settings_title">Recents Panel</string>
+    <!-- App Title -->
+    <string name="pnw_settings_title">Project New World Settings</string>
+
+    <!-- Categories -->
+    <string name="button_title">Buttons</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="lockscreen_title">Lock screen</string>
+    <string name="misc_title">Miscellaneous</string>
+    <string name="navbar_title">Navigation bar</string>
+    <string name="powermenu_title">Power menu</string>
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="recents_title">Recents apps</string>
+    <string name="statusbar_title">Status bar</string>
+    <string name="volume_title">Volume rockers</string>
+    <string name="notifications_title">Notifications</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
 </resources>

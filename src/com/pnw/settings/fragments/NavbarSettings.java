@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The PNW rom
+ * Copyright (C) 2014 TeamEos
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,37 +13,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pnw.settings;
 
-import android.content.ContentResolver;
-import android.content.res.Resources;
+package com.pnw.settings.fragments;
+
+import java.util.ArrayList;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.support.v7.preference.ListPreference;
+import android.support.v14.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 
-import com.android.internal.logging.nano.MetricsProto;
-
-import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.settings.R;
 
-public class RecentSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class NavbarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.pnw_recent_settings);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+        addPreferencesFromResource(R.xml.pnw_settings_navigation);
 
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+
+        return false;
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.PNW;
-    }
-
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+        return MetricsProto.MetricsEvent.PNW_SETTINGS;
     }
 }
