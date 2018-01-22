@@ -35,11 +35,6 @@
             android:title="@string/powermenu_restart_recovery"
             android:defaultValue="true" />
 
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_screenshot"
-            android:title="@string/powermenu_screenshot"
-            android:defaultValue="false" />
-
          <SwitchPreference
             android:key="powermenu_torch"
             android:title="@string/powermenu_torch"
