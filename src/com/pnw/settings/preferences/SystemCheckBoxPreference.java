@@ -17,8 +17,8 @@
 package com.pnw.settings.preferences;
 
 import android.content.Context;
-import android.support.v7.preference.CheckBoxPreference;
 import android.provider.Settings;
+import android.support.v7.preference.CheckBoxPreference;
 import android.util.AttributeSet;
 
 public class SystemCheckBoxPreference extends CheckBoxPreference {
@@ -59,9 +59,8 @@ public class SystemCheckBoxPreference extends CheckBoxPreference {
     }
 
     @Override
-    protected boolean isPersisted() {
-        // Using getString instead of getInt so we can simply check for null
-        // instead of catching an exception. (All values are stored as strings.)
-        return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        setChecked(Settings.System.getString(getContext().getContentResolver(), getKey()) != null ? getPersistedBoolean(isChecked())
+                : (Boolean) defaultValue);
     }
 }
