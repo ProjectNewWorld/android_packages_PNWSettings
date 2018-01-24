@@ -20,49 +20,26 @@
     android:layout="@layout/pnw_preference_tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_power"
-            android:title="@string/powermenu_power"
-            android:defaultValue="true" />
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_reboot"
+        android:title="@string/powermenu_reboot_title"
+        android:defaultValue="true" />
 
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_restart"
-            android:title="@string/powermenu_restart"
-            android:defaultValue="true" />
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_advanced_reboot"
+        android:title="@string/powermenu_advanced_reboot_title"
+        android:summary="@string/powermenu_advanced_reboot_summary"
+        android:dependency="powermenu_reboot"
+        android:defaultValue="false" />
 
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_restart_recovery"
-            android:title="@string/powermenu_restart_recovery"
-            android:defaultValue="true" />
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_screenshot"
+        android:title="@string/powermenu_screenshot_title"
+        android:defaultValue="false" />
 
-         <SwitchPreference
-            android:key="powermenu_torch"
-            android:title="@string/powermenu_torch"
-            android:persistent="false" />
-
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_airplane"
-            android:title="@string/powermenu_airplane"
-            android:defaultValue="false" />
-
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_settings"
-            android:title="@string/powermenu_settings"
-            android:defaultValue="false" />
-
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_lockdown"
-            android:title="@string/powermenu_lockdown"
-            android:defaultValue="false" />
-
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_users"
-            android:title="@string/powermenu_users"
-            android:defaultValue="false" />
-
-         <com.pnw.settings.preferences.SystemSettingSwitchPreference
-            android:key="powermenu_soundpanel"
-            android:title="@string/powermenu_soundpanel"
-            android:defaultValue="false" />
+    <com.pnw.settings.preferences.SystemSettingSwitchPreference
+        android:key="powermenu_airplane"
+        android:title="@string/powermenu_airplane_title"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
