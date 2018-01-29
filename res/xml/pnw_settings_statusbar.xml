@@ -20,6 +20,18 @@
     android:layout="@layout/pnw_preference_tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Clock Customization -->
+    <PreferenceCategory 
+     android:key="clock_customazation_category"
+     android:title="@string/clock_style_cat">
+
+   <Preference
+        android:key="status_bar_clock"
+        android:fragment="com.pnw.settings.fragments.StatusBarClockSettings"
+        android:title="@string/status_bar_clock_title" />
+    
+    </PreferenceCategory>
+
     <!-- StatusBar icons -->
     <PreferenceCategory
         android:key="StatusbarIcons_category"
