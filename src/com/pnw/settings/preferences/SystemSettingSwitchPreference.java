@@ -17,11 +17,13 @@
 package com.pnw.settings.preferences;
 
 import android.content.Context;
-import android.provider.Settings;
 import android.support.v14.preference.SwitchPreference;
+import android.provider.Settings;
 import android.util.AttributeSet;
 
+
 public class SystemSettingSwitchPreference extends SwitchPreference {
+
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
@@ -59,8 +61,9 @@ public class SystemSettingSwitchPreference extends SwitchPreference {
     }
 
     @Override
-    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        setChecked(Settings.System.getString(getContext().getContentResolver(), getKey()) != null ? getPersistedBoolean(isChecked())
-                : (Boolean) defaultValue);
+    protected boolean isPersisted() {
+        // Using getString instead of getInt so we can simply check for null
+        // instead of catching an exception. (All values are stored as strings.)
+        return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }
