@@ -38,10 +38,6 @@
         android:key="leds"
         android:title="@string/leds_category_title">
 
-        <SwitchPreference
-              android:key="notification_pulse"
-              android:title="@string/notification_pulse_title"/>
-
         <PreferenceScreen
               android:key="notification_light"
               android:title="@string/notification_light_title"
