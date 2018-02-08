@@ -296,6 +296,10 @@
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="menu_cancel">Cancel</string>
-    <string name="clock_style_cat">Clock Customization</string>
+    <string name="clock_style_cat">Clock customization</string> 
+
+    <!-- Three finger screenshot -->
+    <string name="three_finger_gesture">Three finger gesture</string>
+    <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
 
 </resources>
